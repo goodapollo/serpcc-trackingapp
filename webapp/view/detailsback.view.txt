@@ -1,0 +1,74 @@
+<!-- <mvc:View controllerName="trackingapp.controller.Details"
+	xmlns:c="sap.suite.ui.commons"
+	xmlns:mvc="sap.ui.core.mvc"
+	xmlns="sap.m"
+	xmlns:form="sap.ui.layout.form"
+	xmlns:vbm="sap.ui.vbm"
+	xmlns:ux="sap.uxap">
+	<Page id="details" showHeader="false">
+        <content>
+		<form:SimpleForm ariaLabelledBy="detailsTitle" backgroundDesign="Transparent" editable="true" id="TrackingForm" layout="ResponsiveGridLayout">
+			<form:toolbar>
+				<Toolbar design="Transparent" id="toolbar">
+					<Button icon="{ui>/sShowListIcon}" id="showList" press=".onShowList" tooltip="{ui>/sShowListTooltip}"/>
+					<Title id="detailsTitle" level="H2" text="Tracking History: HU# {handlingunit}"/>
+				</Toolbar>
+			</form:toolbar>
+			<Label id="carrLabel" labelFor="carrierFld" text="Carrier"/>
+			<Input editable="false" id="carrierFld" value="{carrier}"/>
+			<Label id="servLabel" labelFor="serviceFld" text="Service"/>
+			<Input editable="false" id="serviceFld" value="{service}"/>
+			<Label id="trackLabel" labelFor="trackFld" text="Tracking Number"/>
+			<Input editable="false" id="trackFld" value="{tracknum}"/>
+			<Label id="shpLabel" labelFor="shpFld" text="Ship Date"/>
+			<Input editable="false" id="shpFld" value="{shipdate}"/>
+		</form:SimpleForm>
+		<ux:ObjectPageLayout id="ObjectPageLayout" upperCaseAnchorBar="false">
+			<ux:sections>
+				<ux:ObjectPageSection titleUppercase="false" title="History" id="ObjectPageSection1">
+					<ux:subSections>
+						<ux:ObjectPageSubSection titleUppercase="false" id="ObjectPageSubSection1">
+						<ux:blocks>
+							<c:Timeline enableScroll="false" showHeaderBar="false" id="trackHistory" enableDoubleSided="true" showIcons="false" content="{_details}" noDataText="Loading Data...">
+								<c:content>
+									<c:TimelineItem id="idTemplateItem">
+										<c:embeddedControl>
+											<List id="embList">
+												<items>
+													<CustomListItem id="custEmbList">
+														<Title id="embTitle" text="{statusdesc}" titleStyle="H6"/>
+														<Text id="additionalText" text="{ path: 'eventdatetime', formatter: '.formatDateTime'}"/>
+														<Text id="additionalText2" text="{city}, {region}"/>
+													</CustomListItem>
+												</items>
+											</List>
+										</c:embeddedControl>
+									</c:TimelineItem>
+								</c:content>
+							</c:Timeline>
+							</ux:blocks>
+						</ux:ObjectPageSubSection>
+					</ux:subSections>
+				</ux:ObjectPageSection>
+
+				<ux:ObjectPageSection titleUppercase="false" title="Route" id="ObjectPageSection2">
+					<ux:subSections>
+						<ux:ObjectPageSubSection titleUppercase="false" id="ObjectPageSubSection2">
+							<vbm:GeoMap id="GeoMap" height="400px" width="100%">
+								<vbm:vos>
+									<vbm:Routes id="routes1" items="{geo>/Routes}">
+										<vbm:Route id="route1" position="{geo>pos}" color="rgb(65, 129, 248)" colorBorder="rgb(255,255,255)" linewidth="2" routetype="Geodesic" lineDash="10;5" directionIndicator="true" end="1"/>
+									</vbm:Routes>
+									<vbm:Spots id="SAPSpots" items="{geo>/Spots}">
+										<vbm:Spot id="SAPSpot" position="{geo>pos}" type="{geo>type}" icon="{geo>icon}" tooltip="{geo>tooltip}"/>
+									</vbm:Spots>
+								</vbm:vos>
+							</vbm:GeoMap>
+						</ux:ObjectPageSubSection>
+					</ux:subSections>
+				</ux:ObjectPageSection>
+			</ux:sections>
+		</ux:ObjectPageLayout>
+		</content>
+	</Page>
+</mvc:View> -->

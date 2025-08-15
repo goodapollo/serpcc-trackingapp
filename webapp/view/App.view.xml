@@ -1,0 +1,11 @@
+<mvc:View controllerName="trackingapp.controller.App"
+    displayBlock="true"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m"
+    xmlns:f="sap.f">
+    <App id="app">
+		<f:FlexibleColumnLayout id="layout"/>
+    </App>
+</mvc:View>
+
+
